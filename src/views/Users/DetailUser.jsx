@@ -7,6 +7,7 @@ class DetailUser extends React.Component {
     }
 
     async componentDidMount(){
+        console.log(">>>> check props",this.props)
         if(this.props.match && this.props.match.params){
             let id = this.props.match.params.id;
             let res = await axios.get(`https://reqres.in/api/users/${id}`);
